@@ -32,7 +32,7 @@
 
 @media screen and (min-width: 968px) {
   :root {
-    --bigger-font-size: 4rem;
+    --bigger-font-size: 5rem;
     --big-font-size: 1.75rem;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
@@ -197,6 +197,7 @@ h1 {
   right: 0;
 }
 
+/*============== SOCIAL ===============*/
 /*==================== HOME =====================*/
 .home__container {
   height: calc(100vh - var(--header-height));
@@ -211,10 +212,22 @@ h1 {
           justify-content: center;
 }
 
+.home__data-top {
+  text-align: left;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-light);
+}
+
 .home__data-title {
   font-size: var(--bigger-font-size);
   font-weight: var(--font-bold);
   color: var(--text-color);
+}
+
+.home__data-subtitle {
+  text-align: right;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-light);
 }
 
 /*================ MEDIA QUERIES ================*/

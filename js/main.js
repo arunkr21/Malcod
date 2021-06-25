@@ -32,11 +32,21 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr = ScrollReveal({
     distance: '60px',
-    duration: 2000,
     reset: true,
 })
 
-sr.reveal(`.home__data`,{
+sr.reveal(`.home__data-top`,{
     origin: 'top',
     interval: 100,
+    duration: 1000
+})
+sr.reveal(`.home__data-title`,{
+    origin: 'top',
+    interval: 100,
+    duration: 1500
+})
+sr.reveal(`.home__data-subtitle`,{
+    origin: 'top',
+    interval: 100,
+    duration: 2000
 })

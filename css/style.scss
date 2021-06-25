@@ -25,7 +25,7 @@
     --smaller-font-size: .75rem;
 
     @media screen and (min-width: 968px) {
-        --bigger-font-size: 4rem;
+        --bigger-font-size: 5rem;
         --big-font-size: 1.75rem;
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
@@ -132,20 +132,20 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     &__logo {
-            width: 30px;
+        width: 30px;
     }
-
+    
     &__toogle {
         color: var(--text-color);
         font-size: 1.2rem;
         cursor: pointer;
     }
-
+    
     &__menu {
         position: relative;
-
+        
         @media screen and (max-width: 767px) {
             position: fixed;
             background-color: var(--dark-color);
@@ -167,7 +167,7 @@ h1{
         color: var(--text-color);
         font-weight: var(--font-semi-bold);
         text-transform: uppercase;
-
+        
         &:hover {
             color: var(--white-color);
         }
@@ -187,6 +187,11 @@ h1{
     right: 0;
 }
 
+/*============== SOCIAL ===============*/
+// .social {
+
+// }
+
 /*==================== HOME =====================*/
 .home {
     &__container {
@@ -196,10 +201,20 @@ h1{
         justify-content: center;
     }
     &__data{
+        &-top{
+            text-align: left;
+            font-size: var(--smaller-font-size);
+            font-weight: var(--font-light);
+        }
         &-title{
             font-size: var(--bigger-font-size);
             font-weight: var(--font-bold);
             color: var(--text-color);
+        }
+        &-subtitle {
+            text-align: right;
+            font-size: var(--smaller-font-size);
+            font-weight: var(--font-light);
         }
     }
 }
