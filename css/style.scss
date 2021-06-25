@@ -189,10 +189,8 @@ h1{
 
 /*==================== HOME =====================*/
 .home {
-    // height: 100vh;
     &__container {
-        height: 100vh;
-        // height: calc(100vh - var(--header-height));
+        height: calc(100vh - var(--header-height));
         display: flex;
         align-items: center;
         justify-content: center;
