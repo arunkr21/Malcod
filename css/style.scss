@@ -191,9 +191,9 @@ h1{
 /*==================== HOME =====================*/
 .home {
     &__container {
-        min-height: 640px;
-        // position: relative;
-        height: calc(100vh - var(--header-height));
+        height: 100vh;
+        padding-top: var(--header-height);
+        // height: calc(100vh - var(--header-height));
         display: flex;
         align-items: center;
         justify-content: center;
