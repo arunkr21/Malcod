@@ -195,10 +195,12 @@ h1{
 /*==================== HOME =====================*/
 .home {
     &__container {
-        height: calc(100vh - var(--header-height));
+        height: 100vh;
+        // height: calc(100vh - var(--header-height));
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-bottom: var(--header-height);
     }
     &__data{
         &-top{
