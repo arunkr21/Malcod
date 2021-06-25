@@ -98,6 +98,13 @@ main {
 }
 
 /*======== BACKGROUND GRADIENT ========*/
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: var(--body-color-gradient);
+  position: fixed;
+}
+
 /*================ HEADER ================*/
 .header {
   width: 100%;
@@ -193,7 +200,6 @@ h1 {
 /*==================== HOME =====================*/
 .home__container {
   height: 100vh;
-  padding-top: var(--header-height);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,9 +271,6 @@ h1 {
 @media screen and (min-height: 721px) {
   body {
     margin: 0;
-  }
-  .home__container {
-    height: 640px;
   }
 }
 /*# sourceMappingURL=style.css.map */

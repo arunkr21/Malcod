@@ -105,12 +105,12 @@ main {
 }
 
 /*======== BACKGROUND GRADIENT ========*/
-// .box {
-//     width: 100vw;
-//     height: 100vh;
-//     background: var(--body-color-gradient);
-//     position: fixed;
-// }
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: var(--body-color-gradient);
+    position: fixed;
+}
 
 /*================ HEADER ================*/
 .header {
@@ -149,7 +149,6 @@ h1{
         @media screen and (max-width: 767px) {
             position: fixed;
             background-color: var(--dark-color);
-            // background-color: var(--body-color);
             top: 0;
             right: -100%;
             width: 80%;
@@ -190,9 +189,9 @@ h1{
 
 /*==================== HOME =====================*/
 .home {
+    // height: 100vh;
     &__container {
         height: 100vh;
-        padding-top: var(--header-height);
         // height: calc(100vh - var(--header-height));
         display: flex;
         align-items: center;
@@ -265,9 +264,9 @@ h1{
     body{
         margin: 0;
     }
-    .home{
-        &__container{
-            height: 640px;
-        }
-    }
+    // .home{
+    //     &__container{
+    //         // height: 640px;
+    //     }
+    // }
 }
