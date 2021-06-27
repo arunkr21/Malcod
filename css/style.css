@@ -327,7 +327,7 @@ h1 {
 }
 
 .projects__card {
-  max-width: 500px;
+  max-width: 200px;
   margin: 2rem;
 }
 
@@ -406,6 +406,9 @@ h1 {
   }
   .nav__toggle, .nav__close {
     display: none;
+  }
+  .projects__card {
+    max-width: 500px;
   }
 }
 

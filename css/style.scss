@@ -267,7 +267,7 @@ h1{
     align-items: center;
 
     &__card{
-        max-width: 500px;
+        max-width: 200px;
         margin: 2rem;
     }
     &__images{
@@ -338,6 +338,12 @@ h1{
         &__toggle,
         &__close {
             display: none;
+        }
+    }
+    .projects {
+
+        &__card{
+            max-width: 500px;
         }
     }
 }
