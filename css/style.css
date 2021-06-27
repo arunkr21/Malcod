@@ -65,6 +65,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--text-color);
 }
 
 button,
@@ -175,7 +176,7 @@ h1 {
 
 .nav__link {
   color: var(--text-color);
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--font-medium);
   text-transform: uppercase;
 }
 
@@ -197,6 +198,10 @@ h1 {
       justify-content: space-around;
 }
 
+.nav__social-link {
+  color: var(--text-color);
+}
+
 .nav__close {
   position: absolute;
   top: .75rem;
@@ -211,7 +216,6 @@ h1 {
   right: 0;
 }
 
-/*============== SOCIAL ===============*/
 /*==================== HOME =====================*/
 .home__container {
   height: 100vh;
@@ -245,51 +249,83 @@ h1 {
   font-weight: var(--font-light);
 }
 
-.home__scroll {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  text-align: center;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-animation: scrollAnimation 2s infinite;
-          animation: scrollAnimation 2s infinite;
-}
-
-.home__scroll i {
+/*=============== BUTTONS ===============*/
+.button {
+  margin: 0 auto;
+  display: inline-block;
+  background-color: transparent;
   color: var(--text-color);
-  font-weight: var(--font-light);
+  padding: 1rem 2rem;
+  -webkit-box-shadow: 5px 10px 10px 1px #00000071;
+          box-shadow: 5px 10px 10px 1px #00000071;
+  font-weight: var(--font-semi-bold);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+/*================= PROJECTS =================*/
+.projects {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects__card {
+  max-width: 500px;
+  margin: 2rem;
+}
+
+.projects__images {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  display: none;
+}
+
+.projects__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--text-color);
+  text-align: center;
+  row-gap: 2rem;
+  margin: 0 1rem;
+}
+
+.projects__title {
   font-size: var(--big-font-size);
+  color: var(--text-color);
 }
 
-@-webkit-keyframes scrollAnimation {
-  0% {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-  40% {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
-  100% {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
+.projects__description {
+  max-width: 800px;
+  font-weight: var(--normal-font-size);
+  font-size: var(--small-font-size);
 }
 
-@keyframes scrollAnimation {
-  0% {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-  40% {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
-  100% {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
+.projects .button {
+  font-size: var(--normal-font-size);
 }
 
 /*================ MEDIA QUERIES ================*/
@@ -328,6 +364,9 @@ h1 {
     display: none;
   }
   .nav__toggle, .nav__close {
+    display: none;
+  }
+  .home__scroll {
     display: none;
   }
 }

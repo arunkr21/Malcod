@@ -72,6 +72,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: var(--text-color);
 }
 
 button,
@@ -164,7 +165,7 @@ h1{
     }
     &__link {
         color: var(--text-color);
-        font-weight: var(--font-semi-bold);
+        font-weight: var(--font-medium);
         text-transform: uppercase;
         
         &:hover {
@@ -179,6 +180,10 @@ h1{
         transform: translate(-50%, -50%);
         display: flex;
         justify-content: space-around;
+
+        &-link{
+            color: var(--text-color);
+        }
     }
     &__close {
         position: absolute;
@@ -195,10 +200,6 @@ h1{
     right: 0;
 }
 
-/*============== SOCIAL ===============*/
-// .social {
-
-// }
 
 /*==================== HOME =====================*/
 .home {
@@ -226,29 +227,76 @@ h1{
             font-size: var(--smaller-font-size);
             font-weight: var(--font-light);
         }
-    }
-    &__scroll{
-        position: absolute;
-        top: 90%;
-        left: 50%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-        animation: scrollAnimation 2s infinite;
-        i{
-            color: var(--text-color);
-            font-weight: var(--font-light);
-            font-size: var(--big-font-size);
-        }
+    }   
+}
+/*=============== BUTTONS ===============*/
+.button{
+    margin: 0 auto;
+    display: inline-block;
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    box-shadow: 5px 10px 10px 1px #00000071;
+    font-weight: var(--font-semi-bold);
+    transition: .3s;
+    
+    &:hover{
+        background-color: var(--first-color-alt);
     }
     
+    // &--flex{
+    //     display: flex;
+    //     align-items: center;
+    //     column-gap: .25rem;
+    // }
+    // &--link{
+    //     background: none;
+    //     padding: 0;
+        
+    //     &:hover{
+    //         background: none;
+    //     }
+    // }
 }
-@keyframes scrollAnimation {
-    0%   {transform: translate(-50%, -50%);}
-    // 25%  {}
-    40%  {transform: translate(-50%, -0);}
-    // 75%  {top: 0;}
-    100% {transform: translate(-50%, -50%);}
-  }
+/*================= PROJECTS =================*/
+.projects{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__card{
+        max-width: 500px;
+        margin: 2rem;
+    }
+    &__images{
+        filter: grayscale(100%);
+        display:none;
+    }
+    &__data{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: var(--text-color);
+        text-align: center;
+        row-gap: 2rem;
+        margin: 0 1rem;
+    }
+    &__title{
+        font-size: var(--big-font-size);
+        color: var(--text-color);
+    }
+    &__description {
+        max-width: 800px;
+        font-weight: var(--normal-font-size);
+        font-size: var(--small-font-size);
+    }
+    .button{
+        font-size: var(--normal-font-size);
+    }
+}
+
 /*================ MEDIA QUERIES ================*/
 /* For small devices */
 @media screen and (max-width: 340px){
@@ -289,6 +337,11 @@ h1{
         }
         &__toggle,
         &__close {
+            display: none;
+        }
+    }
+    .home{
+        &__scroll{
             display: none;
         }
     }
