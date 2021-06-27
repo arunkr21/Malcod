@@ -85,6 +85,12 @@ input {
 
 main {
   overflow-x: hidden;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+section {
+  min-height: 700px;
 }
 
 /*================ REUSABLE CSS CLASSES ================*/
@@ -295,6 +301,7 @@ h1 {
   margin: 0 auto;
   display: inline-block;
   background-color: transparent;
+  font-size: var(--small-font-size);
   color: var(--text-color);
   padding: 1rem 2rem;
   -webkit-box-shadow: 5px 10px 10px 1px #00000071;
@@ -363,10 +370,6 @@ h1 {
   max-width: 800px;
   font-weight: var(--normal-font-size);
   font-size: var(--small-font-size);
-}
-
-.projects .button {
-  font-size: var(--normal-font-size);
 }
 
 /*================ MEDIA QUERIES ================*/

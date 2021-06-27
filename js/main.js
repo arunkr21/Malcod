@@ -38,19 +38,19 @@ sr.reveal(`.home__data-top,.projects__title`,{
     origin: 'top',
     interval: 100,
     duration: 1000.,
-    distance: '20px'
+    distance: '40px'
 })
 sr.reveal(`.home__data-title,.projects__description`,{
     origin: 'top',
     interval: 100,
     duration: 1500,
-    distance: '20px'
+    distance: '40px'
 })
 sr.reveal(`.home__data-subtitle`,{
     origin: 'top',
     interval: 100,
     duration: 2000,
-    distance: '20px'
+    distance: '40px'
 })
 
 sr.reveal(`.projects__card`,{
