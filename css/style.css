@@ -320,8 +320,12 @@ h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-column-gap: 4rem;
-            column-gap: 4rem;
+  }
+  .nav__item {
+    margin-left: 4rem;
+  }
+  .nav__social {
+    display: none;
   }
   .nav__toggle, .nav__close {
     display: none;

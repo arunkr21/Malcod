@@ -279,7 +279,13 @@ h1{
         }
         &__list {
             flex-direction: row;
-            column-gap: 4rem;
+            // column-gap: 4rem;
+        }
+        &__item{
+            margin-left: 4rem;
+        }
+        &__social{
+            display: none;
         }
         &__toggle,
         &__close {
