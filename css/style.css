@@ -252,7 +252,7 @@ h1 {
 
 .home__scroll {
   position: absolute;
-  top: 85%;
+  top: 90%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
