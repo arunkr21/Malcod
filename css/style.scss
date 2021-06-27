@@ -157,7 +157,6 @@ h1{
             transition: .4s;
         }
     }
-
     &__list {
         display: flex;
         flex-direction: column;
@@ -171,6 +170,15 @@ h1{
         &:hover {
             color: var(--white-color);
         }
+    }
+    &__social{
+        width: 100%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-around;
     }
     &__close {
         position: absolute;
@@ -219,8 +227,28 @@ h1{
             font-weight: var(--font-light);
         }
     }
+    &__scroll{
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        animation: scrollAnimation 2s infinite;
+        i{
+            color: var(--text-color);
+            font-weight: var(--font-light);
+            font-size: var(--big-font-size);
+        }
+    }
+    
 }
-
+@keyframes scrollAnimation {
+    0%   {transform: translate(-50%, -50%);}
+    // 25%  {}
+    40%  {transform: translate(-50%, -0);}
+    // 75%  {top: 0;}
+    100% {transform: translate(-50%, -50%);}
+  }
 /*================ MEDIA QUERIES ================*/
 /* For small devices */
 @media screen and (max-width: 340px){
