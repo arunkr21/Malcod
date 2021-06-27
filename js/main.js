@@ -77,12 +77,8 @@ sr.reveal(`.projects__button`,{
     duration: 2000,
     distance: '0px'
 })
-// sr.reveal(`.projects__title`,{
-//     origin: 'top',
-//     interval: 100,
-//     duration: 2000
-// })
 
+/*============= IMAGE SLIDER =============*/
 
 var myIndex = 0;
 carousel();
@@ -98,3 +94,15 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 4000); // Change image every 2 seconds
 }
+
+/*======== SCROLL ARROW FADE OUT =========*/
+const checkpoint = 100;
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= checkpoint) {
+    opacity = 1 - currentScroll / checkpoint;
+  } else {
+    opacity = 0;
+  }
+  document.querySelector(".home__scroll").style.opacity = opacity;
+});

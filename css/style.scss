@@ -111,6 +111,7 @@ main {
     height: 100vh;
     background: var(--body-color-gradient);
     position: fixed;
+    z-index: -1;
 }
 
 /*================ HEADER ================*/
@@ -227,8 +228,21 @@ h1{
             font-size: var(--smaller-font-size);
             font-weight: var(--font-light);
         }
-    }   
+    }
+    &__scroll{
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: scrolldown 3s infinite;
+    }
 }
+@keyframes scrolldown {
+    0%   {transform: translate(-50%, -50%);}
+    40%  {transform: translate(-50%, 0);}
+    90%  {transform: translate(-50%, -50%);}
+  }
+
 /*=============== BUTTONS ===============*/
 .button{
     margin: 0 auto;
@@ -243,20 +257,6 @@ h1{
     &:hover{
         background-color: var(--first-color-alt);
     }
-    
-    // &--flex{
-    //     display: flex;
-    //     align-items: center;
-    //     column-gap: .25rem;
-    // }
-    // &--link{
-    //     background: none;
-    //     padding: 0;
-        
-    //     &:hover{
-    //         background: none;
-    //     }
-    // }
 }
 /*================= PROJECTS =================*/
 .projects{
@@ -337,11 +337,6 @@ h1{
         }
         &__toggle,
         &__close {
-            display: none;
-        }
-    }
-    .home{
-        &__scroll{
             display: none;
         }
     }

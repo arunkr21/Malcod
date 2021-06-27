@@ -104,6 +104,7 @@ main {
   height: 100vh;
   background: var(--body-color-gradient);
   position: fixed;
+  z-index: -1;
 }
 
 /*================ HEADER ================*/
@@ -249,6 +250,46 @@ h1 {
   font-weight: var(--font-light);
 }
 
+.home__scroll {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: scrolldown 3s infinite;
+          animation: scrolldown 3s infinite;
+}
+
+@-webkit-keyframes scrolldown {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  40% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  90% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes scrolldown {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  40% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  90% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
 /*=============== BUTTONS ===============*/
 .button {
   margin: 0 auto;
@@ -364,9 +405,6 @@ h1 {
     display: none;
   }
   .nav__toggle, .nav__close {
-    display: none;
-  }
-  .home__scroll {
     display: none;
   }
 }
