@@ -92,12 +92,8 @@ input {
 
 main {
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;
 }
 
-section{
-    // min-height: 00px;
-}
 
 /*================ REUSABLE CSS CLASSES ================*/
 .section {
@@ -141,13 +137,15 @@ h1{
     align-items: center;
     
     &__logo {
-        width: 30px;
+        width: 35px;
+        height: 35px;
     }
     
-    &__toogle {
+    &__toggle {
         color: var(--text-color);
         font-size: 1.2rem;
         cursor: pointer;
+        // margin: auto 0;
     }
     
     &__menu {

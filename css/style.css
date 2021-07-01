@@ -85,8 +85,6 @@ input {
 
 main {
   overflow-x: hidden;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
 }
 
 /*================ REUSABLE CSS CLASSES ================*/
@@ -139,10 +137,11 @@ h1 {
 }
 
 .nav__logo {
-  width: 30px;
+  width: 35px;
+  height: 35px;
 }
 
-.nav__toogle {
+.nav__toggle {
   color: var(--text-color);
   font-size: 1.2rem;
   cursor: pointer;
