@@ -137,8 +137,9 @@ h1{
     align-items: center;
     
     &__logo {
-        width: 35px;
-        height: 35px;
+        img {
+            width: 35px;
+        }
     }
     
     &__toggle {
